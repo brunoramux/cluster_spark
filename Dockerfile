@@ -49,6 +49,7 @@ ENV PYSPARK_PYTHON python3
 
 # Copia o arquivo de configuração do Spark para a imagem
 COPY conf/spark-defaults.conf "$SPARK_HOME/conf"
+COPY conf/log4j2.properties "$SPARK_HOME/conf"
 
 # Permissões
 RUN chmod u+x /opt/spark/sbin/* && \
